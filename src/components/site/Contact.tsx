@@ -9,7 +9,7 @@ const nextSteps = [
   "We talk through the most practical next step",
 ];
 
-export function Contact({ presetService }: { presetService?: string }) {
+export function Contact({ presetService }: { presetService?: string | undefined }) {
   return (
     <section id="contact" aria-labelledby="contact-title" className="relative bg-background py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">

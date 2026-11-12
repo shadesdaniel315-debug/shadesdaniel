@@ -28,7 +28,7 @@ function Field({
   id: string;
   label: string;
   optional?: boolean;
-  error?: string;
+  error?: string | undefined;
   children: React.ReactNode;
   className?: string;
 }) {
@@ -54,7 +54,7 @@ function Field({
 
 const inputClass = "h-11 bg-background text-sm";
 
-export function ContactForm({ presetService }: { presetService?: string }) {
+export function ContactForm({ presetService }: { presetService?: string | undefined }) {
   const send = useServerFn(submitInquiry);
   const [status, setStatus] = useState<Status>({ kind: "idle" });
   const startedAt = useRef<number>(0);
@@ -166,7 +166,7 @@ export function ContactForm({ presetService }: { presetService?: string }) {
             control={control}
             name="budget"
             render={({ field }) => (
-              <Select value={field.value || undefined} onValueChange={field.onChange}>
+              <Select value={field.value ?? ""} onValueChange={field.onChange}>
                 <SelectTrigger id="budget" className={inputClass} onBlur={field.onBlur}>
                   <SelectValue placeholder="Select a range" />
                 </SelectTrigger>

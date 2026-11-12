@@ -20,7 +20,7 @@ const description =
 
 export const Route = createFileRoute("/")({
   validateSearch: (search: Record<string, unknown>): { service?: string } =>
-    typeof search.service === "string" && search.service.length <= 60 ? { service: search.service } : {},
+    typeof search["service"] === "string" && search["service"].length <= 60 ? { service: search["service"] } : {},
   head: () => ({
     meta: [
       { title },
