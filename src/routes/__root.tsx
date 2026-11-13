@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { site } from "@/content/site";
 
 function NotFoundComponent() {
   return (
@@ -81,15 +82,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Daniel Shades — GoHighLevel Specialist" },
+      { title: `${site.name} — GoHighLevel Specialist` },
       {
         name: "description",
         content:
           "GoHighLevel CRM setup, workflow automation, lead follow-up and appointment systems for growing businesses.",
       },
-      { name: "author", content: "Daniel Shades" },
+      { name: "author", content: site.name },
       { name: "theme-color", content: "#0f1730" },
-      { property: "og:site_name", content: "Daniel Shades" },
+      { property: "og:site_name", content: site.name },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

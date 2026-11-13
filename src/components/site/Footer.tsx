@@ -44,8 +44,15 @@ export function Footer() {
             </li>
             {site.email && (
               <li>
-                <a href={`mailto:${site.email}`} className="text-foreground/85 hover:text-primary">
+                <a href={`mailto:${site.email}`} className="break-all text-foreground/85 hover:text-primary">
                   {site.email}
+                </a>
+              </li>
+            )}
+            {site.phone && (
+              <li>
+                <a href={`tel:${site.phone}`} className="text-foreground/85 hover:text-primary">
+                  {site.phone}
                 </a>
               </li>
             )}

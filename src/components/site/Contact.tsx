@@ -1,4 +1,5 @@
-import { CalendarDays, Lock, Mail } from "lucide-react";
+import { CalendarDays, Facebook, Lock, Mail, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { site } from "@/content/site";
 import { ContactForm } from "./ContactForm";
 import { Eyebrow } from "./SectionHeading";
@@ -38,8 +39,8 @@ export function Contact({ presetService }: { presetService?: string | undefined 
                 ))}
               </ol>
 
-              {(site.email || site.bookingUrl) && (
-                <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              {(site.email || site.phone || site.bookingUrl || site.socials.length > 0) && (
+                <div className="mt-10 flex flex-col items-start gap-3">
                   {site.bookingUrl && (
                     <a
                       href={site.bookingUrl}
@@ -51,13 +52,24 @@ export function Contact({ presetService }: { presetService?: string | undefined 
                     </a>
                   )}
                   {site.email && (
-                    <a
-                      href={`mailto:${site.email}`}
-                      className="inline-flex h-11 items-center justify-center gap-2 rounded-lg px-2 text-sm font-semibold text-foreground hover:text-primary"
-                    >
-                      <Mail className="h-4 w-4" aria-hidden="true" /> {site.email}
-                    </a>
+                    <Button asChild variant="link" className="h-auto max-w-full justify-start whitespace-normal px-0 text-foreground hover:text-primary">
+                      <a href={`mailto:${site.email}`}>
+                        <Mail aria-hidden="true" /> <span className="break-all">{site.email}</span>
+                      </a>
+                    </Button>
                   )}
+                  {site.phone && (
+                    <Button asChild variant="link" className="px-0 text-foreground hover:text-primary">
+                      <a href={`tel:${site.phone}`}><Phone aria-hidden="true" /> {site.phone}</a>
+                    </Button>
+                  )}
+                  {site.socials.map((social) => (
+                    <Button key={social.href} asChild variant="link" className="px-0 text-foreground hover:text-primary">
+                      <a href={social.href} target="_blank" rel="noopener noreferrer">
+                        <Facebook aria-hidden="true" /> {social.label}
+                      </a>
+                    </Button>
+                  ))}
                 </div>
               )}
 

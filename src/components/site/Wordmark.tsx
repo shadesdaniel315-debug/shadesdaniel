@@ -23,7 +23,7 @@ export function Wordmark({ className }: { className?: string }) {
     <span className={cn("flex min-w-0 items-center gap-2.5", className)}>
       <LogoMark />
       <span className="flex min-w-0 flex-col leading-none">
-        <span className="truncate text-[15px] font-extrabold tracking-tight text-foreground">{site.name}</span>
+        <span className="text-[13px] font-extrabold leading-snug text-foreground sm:text-[15px]">{site.name}</span>
         <span className="mt-1 truncate font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
           CRM · Automation
         </span>
