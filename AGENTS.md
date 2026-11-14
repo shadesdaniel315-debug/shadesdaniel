@@ -30,3 +30,4 @@ use the editor.
 <!-- LOVABLE:END -->
 
 - Reject outdated Vite dependency requests and prebundle Radix Slot so live updates cannot mix React optimizer generations and invalidate hook dispatchers.
+- Serve site media as real files from `public/assets/` referenced by `/assets/...` paths, not Lovable `.asset.json` CDN pointers, so non-Lovable hosts (Vercel) can load them.

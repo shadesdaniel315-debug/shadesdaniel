@@ -1,4 +1,4 @@
-import portrait from "@/assets/daniel-portrait.jpg.asset.json";
+const portraitSrc = "/assets/daniel-portrait.jpg";
 import { site } from "@/content/site";
 import { Eyebrow } from "./SectionHeading";
 
@@ -16,7 +16,7 @@ export function About() {
           <div aria-hidden="true" className="absolute -inset-3 rounded-[1.75rem] border border-dashed border-primary/30" />
           <div className="relative overflow-hidden rounded-3xl border border-border bg-muted shadow-elevated">
             <img
-              src={portrait.url}
+              src={portraitSrc}
               alt={`Portrait of ${site.name}`}
               width={900}
               height={1200}

@@ -3,25 +3,26 @@
  * except entries marked "Concept project" or "Recreated illustration".
  *
  * To add a real project: copy an entry, change the text, and point `media`
- * at your own video or image. Leave `problem`, `approach` or `outcome` as null
+ * at your own video or image. Media files live in public/assets/ and are
+ * referenced as "/assets/...". Leave `problem`, `approach` or `outcome` as null
  * until you have real details: the site then shows a neutral note instead.
  */
-import solarVideo from "@/assets/portfolio/solar-landing-page.mp4.asset.json";
-import solarPoster from "@/assets/portfolio/solar-landing-page-poster.jpg.asset.json";
-import quizVideo from "@/assets/portfolio/quiz-scoring-workflow.mp4.asset.json";
-import quizPoster from "@/assets/portfolio/quiz-scoring-workflow-poster.jpg.asset.json";
-import assessmentVideo from "@/assets/portfolio/assessment-optin-page.mp4.asset.json";
-import assessmentPoster from "@/assets/portfolio/assessment-optin-page-poster.jpg.asset.json";
-import callVideo from "@/assets/portfolio/call-booked-sms-workflow.mp4.asset.json";
-import callPoster from "@/assets/portfolio/call-booked-sms-workflow-poster.jpg.asset.json";
-import nurtureVideo from "@/assets/portfolio/new-lead-nurture-workflow.mp4.asset.json";
-import nurturePoster from "@/assets/portfolio/new-lead-nurture-workflow-poster.jpg.asset.json";
-import eventFlowVideo from "@/assets/portfolio/event-reminder-workflow.mp4.asset.json";
-import eventFlowPoster from "@/assets/portfolio/event-reminder-workflow-poster.jpg.asset.json";
-import eventPageVideo from "@/assets/portfolio/event-landing-page.mp4.asset.json";
-import eventPagePoster from "@/assets/portfolio/event-landing-page-poster.jpg.asset.json";
-import routingVideo from "@/assets/portfolio/imessage-sms-routing-workflow.mp4.asset.json";
-import routingPoster from "@/assets/portfolio/imessage-sms-routing-workflow-poster.jpg.asset.json";
+const solarVideo = "/assets/portfolio/solar-landing-page.mp4";
+const solarPoster = "/assets/portfolio/solar-landing-page-poster.jpg";
+const quizVideo = "/assets/portfolio/quiz-scoring-workflow.mp4";
+const quizPoster = "/assets/portfolio/quiz-scoring-workflow-poster.jpg";
+const assessmentVideo = "/assets/portfolio/assessment-optin-page.mp4";
+const assessmentPoster = "/assets/portfolio/assessment-optin-page-poster.jpg";
+const callVideo = "/assets/portfolio/call-booked-sms-workflow.mp4";
+const callPoster = "/assets/portfolio/call-booked-sms-workflow-poster.jpg";
+const nurtureVideo = "/assets/portfolio/new-lead-nurture-workflow.mp4";
+const nurturePoster = "/assets/portfolio/new-lead-nurture-workflow-poster.jpg";
+const eventFlowVideo = "/assets/portfolio/event-reminder-workflow.mp4";
+const eventFlowPoster = "/assets/portfolio/event-reminder-workflow-poster.jpg";
+const eventPageVideo = "/assets/portfolio/event-landing-page.mp4";
+const eventPagePoster = "/assets/portfolio/event-landing-page-poster.jpg";
+const routingVideo = "/assets/portfolio/imessage-sms-routing-workflow.mp4";
+const routingPoster = "/assets/portfolio/imessage-sms-routing-workflow-poster.jpg";
 
 export type ProjectCategory =
   | "CRM & Pipelines"
@@ -93,8 +94,8 @@ export const projects: Project[] = [
     media: [
       {
         kind: "video",
-        src: callVideo.url,
-        poster: callPoster.url,
+        src: callVideo,
+        poster: callPoster,
         caption: "Walkthrough of the workflow canvas, from booking trigger to reminder chain.",
       },
     ],
@@ -126,8 +127,8 @@ export const projects: Project[] = [
     media: [
       {
         kind: "video",
-        src: nurtureVideo.url,
-        poster: nurturePoster.url,
+        src: nurtureVideo,
+        poster: nurturePoster,
         caption: "Zooming across the full nurture workflow, then into individual branches.",
       },
     ],
@@ -190,14 +191,14 @@ export const projects: Project[] = [
     media: [
       {
         kind: "video",
-        src: assessmentVideo.url,
-        poster: assessmentPoster.url,
+        src: assessmentVideo,
+        poster: assessmentPoster,
         caption: "Scroll-through of the opt-in page.",
       },
       {
         kind: "video",
-        src: quizVideo.url,
-        poster: quizPoster.url,
+        src: quizVideo,
+        poster: quizPoster,
         caption: "The quiz submission workflow with score-range triggers and tagging branches.",
       },
     ],
@@ -228,8 +229,8 @@ export const projects: Project[] = [
     media: [
       {
         kind: "video",
-        src: solarVideo.url,
-        poster: solarPoster.url,
+        src: solarVideo,
+        poster: solarPoster,
         caption: "Page preview from the hero to the lead form. Footer contact details are cropped out.",
       },
     ],
@@ -259,8 +260,8 @@ export const projects: Project[] = [
     media: [
       {
         kind: "video",
-        src: eventPageVideo.url,
-        poster: eventPagePoster.url,
+        src: eventPageVideo,
+        poster: eventPagePoster,
         caption: "Page preview. Footer contact details are cropped out.",
       },
     ],
@@ -292,8 +293,8 @@ export const projects: Project[] = [
     media: [
       {
         kind: "video",
-        src: eventFlowVideo.url,
-        poster: eventFlowPoster.url,
+        src: eventFlowVideo,
+        poster: eventFlowPoster,
         caption: "Walkthrough from the form trigger down through the reminder branches.",
       },
     ],
@@ -325,8 +326,8 @@ export const projects: Project[] = [
     media: [
       {
         kind: "video",
-        src: routingVideo.url,
-        poster: routingPoster.url,
+        src: routingVideo,
+        poster: routingPoster,
         caption: "From the workflows list into the routing logic and reply branches.",
       },
     ],
