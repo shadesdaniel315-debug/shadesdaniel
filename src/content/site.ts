@@ -8,7 +8,7 @@ export const site = {
   title: "GoHighLevel Specialist | CRM & Automation Systems",
   tagline: "I make the busywork work for you.",
   /** Public business email, e.g. "hello@yourdomain.com". Empty = hidden. */
-  email: "shadesdaniel315@gmail.com",
+  email: "israelshades21@gmail.com",
   phone: "09167277383",
   /** Booking link (Calendly, GHL calendar, etc.). Empty = no "Book a Call" button. */
   bookingUrl: "",
